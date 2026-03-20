@@ -2,17 +2,17 @@ import css from "./VoteOptions.module.css";
 
 import type { VoteType } from "../../types/votes";
 
-interface VoteOptionProps {
+interface VoteOptionsProps {
   onVote: (type: VoteType) => void;
   onReset: () => void;
   canReset: boolean;
 }
 
-export default function VoteOption({
+export default function VoteOptions({
   onVote,
   onReset,
   canReset,
-}: VoteOptionProps) {
+}: VoteOptionsProps) {
   return (
     <div className={css.container}>
       <button className={css.button} onClick={() => onVote("good")}>
